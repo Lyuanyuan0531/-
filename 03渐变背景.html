@@ -1,0 +1,304 @@
+<!-- 作业要求：
+1.自行构建HTML结构，内含30个小盒子，效果类似于2-03 CSS边框。鼠标经过小盒子时可以浮现1234等数字。（建议使用ememet语法快速构建）
+2.利用linear-gradient对各盒子进行设置，完成效果图。可以使用量图工具。
+3.部分盒子效果文字说明：
+    线性渐变主要色调：暗蓝色#f63  暗橙色#58a
+    第14--21个盒子开始使用多背景
+    第22-30个盒子开始是径向渐变
+ -->
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02 CSS3渐变背景</title>
+    <style>
+    body, ul,li,dl,dt,dd,h1,h2,h3,h4,h5 {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: #F7F7F7;
+    }
+    .wrapper {
+        width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    header {
+        padding: 20px 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    header h3 {
+        line-height: 1;
+        font-weight: normal;
+        font-size: 28px;
+    }
+    .main:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+    .main .item {
+        width: 200px;
+        height: 200px;
+        margin: 0 30px 30px 0;
+        display: flex;
+        position: relative;
+        background-color: #fff;
+        float: left;
+        box-shadow: 2px 2px 5px #ccc;
+    }
+ 
+    .border-radius {
+       width: 200px;
+        height: 200px;
+        margin: auto; 
+    }
+    .item:nth-child(1) .border-radius {
+        background-image: linear-gradient(#f63,#58a);
+    }
+    .item:nth-child(2) .border-radius {
+        background-image: linear-gradient(#f63 20%,#58a 80%);
+    }
+    .item:nth-child(3) .border-radius {
+        background-image: linear-gradient(#f63 50%,#58a 50%);
+    }
+    .item:nth-child(4) .border-radius {
+        background-image: linear-gradient(#f63 50%,#58a 50%);
+        background-size: 100% 50px;
+    }
+    .item:nth-child(5) .border-radius {
+        background-image: linear-gradient(#f63 0%,#f63 30%,#58a 30%,#58a 70%);
+        background-size: 100% 50px;
+    }
+    .item:nth-child(6) .border-radius {
+        background-image: linear-gradient(#f63 0%,#f63 33.3%,#58a 33.3%,#58a 66.6%,#9acd32 66.6%,#9acd32 100%);
+        background-size: 100% 50px;
+        
+    }
+    .item:nth-child(7) .border-radius {
+        background-image: linear-gradient(#58a 0%,#58a 25%,#f63 25%,#f63 50%,#9acd32 50%,#9acd32 75%,#800080 75%,#800080 100%);
+        background-size: 100% 50px;}
+
+    .item:nth-child(8) .border-radius {
+       background-image: linear-gradient(90deg,#58a 0%,#58a 25%,#f63 25%,#f63 50%,#9acd32 50%,#9acd32 75%,#800080 75%,#800080 100%);
+        background-size:50px 100%}
+
+    .item:nth-child(9) .border-radius {
+        background-image: linear-gradient(45deg,#58a 0%,#58a 25%,#f63 25%,#f63 50%,#9acd32 50%,#9acd32 75%,#800080 75%,#800080 100%);
+        background-size:50px 25%;
+    }
+    .item:nth-child(10) .border-radius {
+        background-image: linear-gradient(45deg,#58a 0%,#58a 25%,#f63 25%,#f63 50%,#58a 50%,#58a 75%,#f63 75%,#f63 100%);
+        background-size:50px 50px;
+    }
+      
+    .item:nth-child(11) .border-radius {
+       background-image: linear-gradient(45deg,#58a 0%,#58a 25%,#f63 25%,#f63 50%,#58a 50%,#58a 75%,#f63 75%,#f63 100%);
+        background-size:20px 20px;
+    
+    }
+    .item:nth-child(12) .border-radius {
+        background-image: linear-gradient(45deg,#58a 0%,#58a 36%,#f63 36%,#f63 50%,#58a 50%,#58a 86%,#f63 86%,#f63 100%);
+        background-size:50px 50px;
+    }
+    .item:nth-child(13) .border-radius {
+        background-image: linear-gradient(64deg,#58a 0%,#58a 25%,#f63 25%,#f63 50%,#58a 50%,#58a 75%,#f63 75%,#f63 100%);
+        background-size:24px 50px;
+    
+    }
+    .item:nth-child(14) .border-radius {
+        background-image: linear-gradient(45deg,#6694b2 0%,#6694b2 25%,#58a 25%,#58a 50%,#6694b2 50%,#6694b2 75%,#58a 75%,#58a 100%);
+        background-size:50px 50px;
+    
+    }
+    .item:nth-child(15) .border-radius {
+        background-image: linear-gradient(25deg,#ff7547 0%,#ff7547 25%,#f63 25%,#f63 50%,#ff7547 50%,#ff7547 75%,#f63 75%,#f63 100%);
+        background-size:80px 37px;
+    }
+    .item:nth-child(16) .border-radius {
+        background-color: #ff6633;
+        background-image: 
+        linear-gradient(rgba(225,225,225,1) 1px,transparent 0),
+        linear-gradient(90deg,rgba(225,225,225,1)1px,transparent 0);
+        background-size: 30px 30px;
+        
+    }
+    .item:nth-child(17) {
+        background-color: #ff6633;
+        background-image: 
+        linear-gradient(white 2px,transparent 0),
+        linear-gradient(90deg,white 2px,transparent 0);
+        background-size: 30px 30px;
+        }
+    .item:nth-child(18) .border-radius {
+        background-color: #ff6633;
+        background-image: 
+        linear-gradient(rgba(225,225,225,0.8) 1px,transparent 0),
+        linear-gradient(90deg,rgba(225,225,225,0.8) 1px,transparent 0),
+        linear-gradient(white 2px,transparent 0),
+        linear-gradient(90deg,white 2px,transparent 0);
+        background-size: 15px 15px,15px 15px,75px 75px,75px 75px;
+    }
+    .item:nth-child(19) .border-radius {
+        background-image: linear-gradient(45deg,#bbbbbb 0%,#bbbbbb 50%,#eeeeee 50%,#eeeeee 100%);
+        background-size: 10% 20px;
+    }
+   
+    .item:nth-child(20) .border-radius{
+       background-image: linear-gradient(90deg,#f63 0%,#f63 5%,#9acd32 5%,#9acd32 10%,#f0e2db 10%,#f0e2db 20%,#665555 20%,#665555 30%,
+        #f63 30%,#f63 35%,#9acd32 35%,#9acd32 45%,#f0e2db 45%,#f0e2db 50%,#665555 50%,#665555 60%,
+         #f63 60%,#f63 70%,#9acd32 70%,#9acd32 80%,#f0e2db 80%,#f0e2db 83%,#665555 83%,#665555 90%,#9acd32 90%,#9acd32 100%)
+    
+         }
+    .item:nth-child(21) .border-radius {
+        background-image: linear-gradient(90deg,#f63 0%,#f63 5%,#f0e2db 5%,#f0e2db 10%,#9acd32 10%,#9acd32 20%,#665555 20%,#665555 35%,
+        #f63 35%,#f63 40%,#9acd32 40%,#9acd32 45%,#f0e2db 45%,#f0e2db 50%,#665555 50%,#665555 60%,
+         #f63 60%,#f63 65%,#9acd32 65%,#9acd32 75%,#f0e2db 75%,#f0e2db 83%,#f63 83%,#f63 90%,#665555 90%,#665555 95%,#9acd32 95%,#9acd32 100%)
+    }
+    .item:nth-child(22) .border-radius {
+        background-image: radial-gradient(150px at center, #000,#fff);
+    }
+    .item:nth-child(23) .border-radius {
+        background-image: radial-gradient(115px at center,#fff 0%,#88ceeb 40%,red 75%,black 100%);
+        
+    }
+    
+    
+    .item:nth-child(24) .border-radius {
+        background-image: radial-gradient(150px at right bottom,#fff 0%,#88ceeb 40%,red 75%,black 100%);
+    }
+    
+    .item:nth-child(25) .border-radius {
+               background-image: radial-gradient(128px 50px at center,#fff 0%,#88ceeb 40%,red 75%,black 100%);
+} 
+    .item:nth-child(26) .border-radius {
+        background-image: radial-gradient(164px at 65px,#fff,#000);
+    }
+    
+    .item:nth-child(27) .border-radius {
+        background-image: radial-gradient(110px 50px at 100px 26px,#fff,#000);
+    }
+    .item:nth-child(28) .border-radius {
+     background-image: radial-gradient(50px 128px at 168px,#fff 0%,#88ceeb 40%,red 75%,black 100%);
+
+    }
+    .item:nth-child(29) .border-radius {
+        background-color: #655;
+        background-image: radial-gradient(tan 30%,transparent 0);
+        background-size: 28px 30px;
+    }
+    .item:nth-child(30) .border-radius {
+        background-color: #655;
+        background-image: radial-gradient(tan 30%,transparent 0), radial-gradient(tan 30%,transparent 0);
+        background-size: 30px 30px;
+        background-position: 0 0,15px 15px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h3>CSS3 渐变背景</h3>
+        </header>
+        <div class="main">
+            <div class="item" data-brief="1">
+               <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="2">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="3">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="4">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="5">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="6">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="7">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="8">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="9">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="10">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="11">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="12">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="13">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="14">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="15">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="16">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="17">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="18">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="19">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="20">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="21">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="22">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="23">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="24">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="25">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="26">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="27">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="28">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="29">
+                <div class="border-radius"></div>
+            </div>
+            <div class="item" data-brief="30">
+                <div class="border-radius"></div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>
