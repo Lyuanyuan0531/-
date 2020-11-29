@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>04 CSS3过渡（花样告白）</title> 
+    <style type="text/css">
+    body{
+    	background-color: #316eeb;
+    }
+    
+    .item{
+    	width: 200px;
+    	height: 250px;
+    	margin-top: 200px;
+        margin-left: 30px;
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        background-color: #fff;
+        float: left;
+        left: 85px;
+        top: 130px;
+        }
+   .item:hover{
+    background-color: #fff;
+    transition: all 1s linear;
+    transform: translateY(-20px);
+   }
+   .desc{
+    position: absolute;
+    top: 250px;
+    width: 200px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    background-color:#ff5801;
+    transform: translateY(0px);
+}
+ .item:hover .desc{
+    transition: all 1s linear;
+    transform: translateY(-100px);
+}
+.pic{
+width: 150px;
+ height: 150px;
+ margin: 30px 30px 0px 25px;}
+    
+
+
+.heart:before,.heart:after{
+        width: 180px;
+        height: 289px;
+        left: 356px;
+        top: 27px;
+        text-align: center;
+        font-size: 30px;
+        line-height: 106px;
+        color: yellow;
+        background-color:#ff0582;
+        position: absolute;
+        content: "";
+        -moz-border-radius:50px 50px 0 0;
+        border-radius: 102px 100px 0 0;
+        -webkit-transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+        -o-transform:rotate(-45deg);
+        transform:rotate(-45deg);
+        -webkit-transform-origin:0 100%;
+        -ms-transform-origin:0 100%;
+        -moz-transform-origin:0 100%;
+        -o-transform-origin:0 100%;
+}
+.heart::before{
+    content: '某某某';
+    
+   }
+   
+
+.heart:after{
+        left: 176px;
+        text-align: center;
+        font-size: 27px;
+        line-height: 107px;
+        color: yellow;
+        -webkit-transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+        -o-transform:rotate(45deg);
+        transform:rotate(45deg);
+        -webkit-transform-origin:100% 100%;
+        -ms-transform-origin:100% 100%;
+        -moz-transform-origin:100% 100%;
+        -o-transform-origin:100% 100%;
+        transform-origin:100% 100%;
+}
+.heart::after{
+    content: '我喜欢你';
+    
+   }
+   .top .box{
+    position: absolute;
+    top: 18px;
+    right: 250px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-origin: center center; 
+    transition: 2s;
+   }
+	
+.top .box:hover{
+	transform: rotateY(180deg);
+	-webkit-transform:rotateY(180deg);
+}
+.box .box1{
+	background: url("images/bg.png") 301px 300px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	backface-visibility: hidden;
+}
+.box .box2{
+	background: url("images/bg.png") 606px 300px;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	transform: rotateY(-180deg);
+	-webkit-transform:rotateY(-180deg);
+}
+
+
+
+
+    </style>  
+</head>
+
+<body>
+    <div class="top">
+         <div class="heart"></div>
+    <div class="box">
+        <div class="box1">
+         </div>
+        <div class="box2">
+         </div>
+    </div>
+    </div>
+   
+    <div class="items">
+        <div class="item">
+            <img src="./images/1.jpg" alt="" width="200px" height="250px">
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/2.png" alt="">
+            </div>
+            <div class="desc">有句话悄悄说</div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="desc">你的样子最可爱</div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/4.png" alt="">
+            </div>
+            <div class="desc">喜欢的就是你</div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/5.png" alt="">
+            </div>
+            <div class="desc">期限是一万年</div>
+        </div>
+    </div>
+</body>
+
+</html>
