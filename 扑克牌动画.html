@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>扑克牌</title>
+	<style type="text/css">
+	.item{
+		width:400px;
+		height: 613px;
+		
+		position: relative;
+		background-color: white;
+		margin-top: 100px;
+		left: 50%;
+		transform: translateX(-50%);
+
+	}
+	.item hover{
+		float: left;
+		position: relative;
+		transform: rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	}
+/*	.item .pic{
+		transform: rotateY(180deg);
+	-webkit-transform:rotateY(180deg);
+	}*/
+	.pic{
+		position: absolute;
+		width:100%;
+		height: 100%;
+		/*-webkit-transform-origin: 800px 600px;
+		-moz-transform-origin: 800px 600px;
+		-ms-transform-origin: 800px 600px ;
+		-o-transform-origin: 800px 600px;*/
+		transform-origin: center bottom;
+		transition: 2s linear;
+
+		
+	}
+/*	.pic hover{
+		position: absolute;
+		top: 0%;
+        left: 0%;
+	}*/
+
+	
+	.item:hover  div:nth-child(1){
+		transform: rotate(-70deg);
+	/*	animation: pic1 2s infinite;*/
+	}
+	.item:hover  div:nth-child(2){
+		transform: rotate(-60deg);
+		/*animation: pic2 2s infinite;*/
+	}
+.item:hover  div:nth-child(3){
+	transform: rotate(-50deg);
+	/*	animation: pic3 2s infinite;*/
+	}
+.item:hover  div:nth-child(4){
+	transform: rotate(-40deg);
+		/*animation: pic4 2s infinite;*/
+	}
+.item:hover div:nth-child(5){
+	transform: rotate(-30deg);
+		/*animation: pic5 2s infinite;*/
+	}
+.item:hover  div:nth-child(6){
+	transform: rotate(-20deg);
+	/*	animation: pic6 2s infinite;*/
+	}
+.item:hover  div:nth-child(7){
+	transform: rotate(-10deg);
+		/*animation: pic7 2s infinite;*/
+	}
+.item:hover  div:nth-child(8){
+	transform: rotate(0deg);
+	/*	animation: pic8 2s infinite;*/
+	}
+.item:hover div:nth-child(9){
+	transform: rotate(10deg);
+	/*	animation: pic9 2s infinite;*/
+	}
+.item:hover div:nth-child(10){
+	transform: rotate(20deg);
+/*		animation: pic10 2s infinite;
+*/	}
+.item:hover div:nth-child(11){
+	transform: rotate(30deg);
+		/*animation: pic11 2s infinite;*/
+	}
+.item:hover div:nth-child(12){
+	transform: rotate(40deg);
+/*		animation: pic12 2s infinite;
+*/	}
+.item:hover div:nth-child(13){
+	transform: rotate(50deg);
+/*		animation: pic13 2s infinite;
+*/	}
+.item:hover div:nth-child(14){
+	transform: rotate(60deg);
+/*		animation: pic14 2s infinite;
+*/	}
+.item:hover div:nth-child(15){
+	transform: rotate(70deg);
+/*		animation: pic15 2s infinite;
+*/	}
+
+/*	@keyframes pic1 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(-140deg);
+		}
+
+	}
+	@keyframes pic2 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(-120deg);
+		}
+
+	}
+	@keyframes pic3 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(-100deg);
+		}
+
+	}
+	@keyframes pic4 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(-80deg);
+		}
+
+	}
+	@keyframes pic5 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(-60deg);
+		}
+
+	}
+	@keyframes pic6 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(-40deg);
+		}
+
+	}
+	@keyframes pic7 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(-20deg);
+		}
+
+	}
+	@keyframes pic8 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(0deg);
+		}
+
+	}
+	@keyframes pic9 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(20deg);
+		}
+
+	}
+	@keyframes pic10 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(40deg);
+		}
+
+	}
+	@keyframes pic11 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(60deg);
+		}
+		@keyframes pic12 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(80deg);
+		}
+
+	}
+	@keyframes pic13 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(100deg);
+		}
+
+	}
+	@keyframes pic14 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(120deg);
+		}
+
+	}
+	@keyframes pic15 {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(140deg);
+		}
+}
+	
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="item">
+            <div class="pic">
+                <img src="./images/1.jpg" alt="">
+            </div>
+           
+            <div class="pic">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            
+            <div class="pic">
+                <img src="./images/3.jpg" alt="">
+            </div>
+            <div class="pic">
+                <img src="./images/4.jpg" alt="">
+            </div>
+            
+            <div class="pic">
+                <img src="./images/5.jpg" alt="">
+            </div>
+            
+            <div class="pic">
+                <img src="./images/6.jpg" alt="">
+            </div>
+            
+            <div class="pic">
+                <img src="./images/7.jpg" alt="">
+            </div>
+            
+            <div class="pic">
+                <img src="./images/8.jpg" alt="">
+            </div>
+            
+            <div class="pic">
+                <img src="./images/9.jpg" alt="">
+            </div>
+            
+            <div class="pic">
+                <img src="./images/10.jpg" alt="">
+            </div>
+            
+            <div class="pic">
+                <img src="./images/11.jpg" alt="">
+            </div>
+            
+            <div class="pic">
+                <img src="./images/12.jpg" alt="">
+            </div>
+            
+            <div class="pic">
+                <img src="./images/13.jpg" alt="">
+            </div>
+           
+            <div class="pic">
+                <img src="./images/j.jpg" alt="">
+            </div>
+           
+            <div class="pic">
+                <img src="./images/j2.jpg" alt="">
+            </div>
+            </div>
+</body>
+</html>
